@@ -1,18 +1,6 @@
 
-module "myec2_name" {
-  source = "./module/"
-  instance_type = var.name
+resource "aws_instance" "ec2_d" {
+    ami = "ami-0715c1897453cabd1"
+    # instance_type = "t2.micro"           #hardcoding this instance type like this is *final* value
+    instance_type = var.instance_type      #leaving it as variable default, allow to be overwritten
 }
- 
-
-
- 
-# module "myec2_name2" {
-#   source = "./module/"
-#   instance_type = module.myec2_name.my_ec2_id_output
-#   # instance_type = "t2.micro"
-# }
- 
-
-
- 
