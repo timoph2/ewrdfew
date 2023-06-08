@@ -3,6 +3,10 @@ variable "region" {
 }
 
 
+variable "instance_type" {
+}
+
+
 variable "s3_bucket_conf" {
    type        = list
   default     = []
